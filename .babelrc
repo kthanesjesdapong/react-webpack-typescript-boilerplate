@@ -1,0 +1,23 @@
+{
+    "presets": [
+      "@babel/preset-env",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+        //let's use you async await feature in react app
+      ]
+    ]
+  }
+
+  //Transpile modern Javascript features into a format that browsers can understand.
