@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
@@ -49,7 +50,7 @@ module.exports = {
             template: path.resolve(__dirname, '..', './src/index.html'),
         }),
         new CopyPlugin({
-            patterns: [{ from: 'source', to: 'build' }]
+            patterns: [{ from: 'src', to: 'build' }]
         })
     ],
     //Injects our bundle.js to index.html, and it will place that html file into the build folder.
